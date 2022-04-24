@@ -33,7 +33,7 @@
       let isForcedToRotate = false;
 
       try {
-        portraitMode = !!JSON.parse(true);
+        portraitMode = !!JSON.parse(false);
       } catch (e) {
         portraitMode = false;
       }
@@ -269,7 +269,7 @@
     <script>
       // Main resizing function
       function Resize() {
-        const desktopPortraitModeMaxWidth = 406;
+        const desktopPortraitModeMaxWidth = 1920;
         let webglContainer = document.querySelector(".webgl");
         let webglMaxWidthString = isInFirstScreen
           ? getComputedStyle(webglContainer).maxWidth.split("px")
@@ -280,9 +280,9 @@
         let aspectRatio;
 
         if (portraitMode) {
-          aspectRatio = 720 > 406 ? 720/406 : 406/720;
+          aspectRatio = 1080 > 1920 ? 1080/1920 : 1920/1080;
         } else {
-            aspectRatio =  406 < 720 ? 406/720 : 720/406;
+            aspectRatio =  1920 < 1080 ? 1920/1080 : 1080/1920;
           }
 
 
@@ -302,7 +302,7 @@
             desktopPortraitModeMaxWidth + "px";
           document.getElementById("unityContainer").style.margin = "0 auto";
         } else if (portraitMode && !isMobile && !isInFirstScreen) {
-          webglContainer.style.height = 720 + "px"; //convert to 720
+          webglContainer.style.height = 1080 + "px"; //convert to 1080
           webglContainer.style.width = desktopPortraitModeMaxWidth + "px";
           unityContainer.style.width = desktopPortraitModeMaxWidth + "px";
           unityContainer.style.height = webglContainer.style.height;
