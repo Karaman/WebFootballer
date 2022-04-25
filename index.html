@@ -1,15 +1,17 @@
 <!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+	<meta
       name="viewport"
       content=" height = device-height, width = device-width, initial-scale = 1.0, minimum-scale = 1.0, maximum-scale = 1.0, user-scalable = no, target-densitydpi = device-dpi "
     />
     <title>WebFootballers</title>
-    <link id="main-style" rel="stylesheet" href="External/style.css" />
-    <script src="Build/UnityLoader.js"></script>
+    <link rel="stylesheet" href="./External/preloader.css">
+	<link id="main-style" rel="stylesheet" href="./External/style.css" />
+	<script src="Build/UnityLoader.js"></script>
     <script>
       const forceLandscapeIcon = "External/landscape.svg";
       const forcePortraitIcon = "External/portrait.svg";
@@ -412,10 +414,14 @@
         }
       })(this);
     </script>
-  </head>
+</head>
+<body>
 
-  <body>
-    <!--Nav bar-->
+<div class="loader_bg">
+    <div class="loader"></div>
+</div>
+
+<!--Nav bar-->
     <div id="top-container"></div>
     <div class="main-content">
       <div class="main-content--grid">
@@ -436,7 +442,7 @@
       </div>
     </div>
     <footer>
-      Template made by Repulse - <a href="https://jrpg.com/arcade">Link</a>
+      Copyright Reserved &copy;	2022
     </footer>
     <script>
       function toggleHamburger(obj) {
@@ -444,5 +450,13 @@
         containerElement.classList.toggle("change");
       }
     </script>
-  </body>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        setTimeout(function(){
+            $('.loader_bg').fadeToggle();
+        }, 1500);
+    </script>
+</body>
 </html>
