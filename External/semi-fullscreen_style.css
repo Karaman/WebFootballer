@@ -13,6 +13,7 @@
   background-color: #749ccc;
   text-align: center;
   transition: 0.4s;
+  diplay:none;
 }
 
 /*Hamburger */
@@ -30,6 +31,7 @@
   margin-left: 5px;
   cursor: pointer;
   width: 30px;
+  diplay:none;
 }
 
 .bar1,
@@ -40,6 +42,7 @@
   background-color: #333;
   margin: 6px 0;
   transition: 0.4s;
+  diplay:none;
 }
 
 .change .bar1 {
